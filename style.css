@@ -1,0 +1,127 @@
+body{
+  font-family:Segoe UI,Arial;
+  margin:0;
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:linear-gradient(135deg,#667eea,#764ba2,#43cea2);
+  color:#333;
+}
+
+.atm-box{
+  background:#ffffff;
+  color:#333;
+  padding:30px;
+  border-radius:16px;
+  width:350px;
+  max-width:95%;
+  text-align:center;
+  box-shadow:0 12px 35px rgba(0,0,0,.2);
+  transition:.3s;
+}
+
+.atm-box:hover{
+  transform:translateY(-5px);
+}
+
+h2{
+  margin-bottom:20px;
+  color:#5a4fcf;
+  font-weight:700;
+}
+
+#pin-display{
+  font-size:26px;
+  letter-spacing:6px;
+  margin-bottom:15px;
+  color:#555;
+}
+
+.keypad{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:10px;
+  margin-bottom:10px;
+}
+
+button{
+  border:none;
+  padding:14px;
+  border-radius:10px;
+  font-size:16px;
+  cursor:pointer;
+  background:linear-gradient(135deg,#36d1dc,#5b86e5);
+  color:white;
+  transition:.25s;
+  box-shadow:0 4px 12px rgba(0,0,0,.2);
+}
+
+button:hover{
+  transform:scale(1.07);
+  background:linear-gradient(135deg,#5b86e5,#36d1dc);
+}
+
+.menu-button{
+  width:160px;
+  margin:8px 0;
+  background:linear-gradient(135deg,#ff9a9e,#fad0c4);
+  color:#333;
+  font-weight:600;
+}
+
+.menu-button:hover{
+  background:linear-gradient(135deg,#fbc2eb,#a6c1ee);
+}
+
+#output{
+  margin-top:15px;
+  font-weight:500;
+  min-height:25px;
+  color:#222;
+}
+
+#receiptModal{
+  display:none;
+  position:fixed;
+  left:0;
+  top:0;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,.5);
+}
+
+#receiptContent{
+  background:#ffffff;
+  color:#333;
+  width:300px;
+  margin:80px auto;
+  padding:20px;
+  border-radius:12px;
+  font-family:monospace;
+  box-shadow:0 10px 30px rgba(0,0,0,.3);
+  text-align:left;
+}
+
+#receiptContent h3{
+  text-align:center;
+  border-bottom:1px dashed #bbb;
+  padding-bottom:8px;
+  color:#5a4fcf;
+}
+
+#closeReceipt{
+  margin-top:10px;
+  width:100%;
+  background:linear-gradient(135deg,#36d1dc,#5b86e5);
+}
+
+@media(max-width:420px){
+  button{
+    padding:12px;
+    font-size:14px;
+  }
+  .menu-button{
+    width:100%;
+  }
+}

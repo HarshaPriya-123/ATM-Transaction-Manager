@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ATM Banking System</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="atm-box">
+
+<h2>ATM Banking</h2>
+
+<div id="login">
+  <div id="pin-display">____</div>
+
+  <div class="keypad">
+    <button onclick="enterDigit('1')">1</button>
+    <button onclick="enterDigit('2')">2</button>
+    <button onclick="enterDigit('3')">3</button>
+    <button onclick="enterDigit('4')">4</button>
+    <button onclick="enterDigit('5')">5</button>
+    <button onclick="enterDigit('6')">6</button>
+    <button onclick="enterDigit('7')">7</button>
+    <button onclick="enterDigit('8')">8</button>
+    <button onclick="enterDigit('9')">9</button>
+    <button onclick="clearPin()">C</button>
+    <button onclick="enterDigit('0')">0</button>
+    <button onclick="login()">OK</button>
+  </div>
+
+  <p id="loginMsg"></p>
+</div>
+
+<div id="menu" style="display:none">
+  <button class="menu-button" onclick="deposit()">Deposit</button>
+  <button class="menu-button" onclick="withdraw()">Withdraw</button>
+  <button class="menu-button" onclick="checkBalance()">Check Balance</button>
+  <button class="menu-button" onclick="history()">Transactions</button>
+  <button class="menu-button" onclick="printReceipt()">Print Receipt</button>
+  <button class="menu-button" onclick="exitATM()">Exit</button>
+  <p id="output"></p>
+</div>
+
+<div id="receiptModal">
+  <div id="receiptContent">
+    <h3>🏧 ATM RECEIPT</h3>
+    <pre id="receiptText"></pre>
+    <button id="closeReceipt">Close</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
